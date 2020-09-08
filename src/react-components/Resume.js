@@ -7,8 +7,7 @@ import {
   Button,
   Image,
   Text,
-  Flex,
-  Link
+  Flex
 } from "rebass";
 import {Divider, Spacer} from "./theme.js"
 
@@ -25,7 +24,7 @@ function downloadResume() {
     let url = window.URL.createObjectURL(file);
     let a = document.createElement("a");
     a.href = url;
-    a.download = 'Joshua\ Han\ Resume.pdf';
+    a.download = 'Joshua Han Resume.pdf';
     a.click();
   })
   .catch((err) => {

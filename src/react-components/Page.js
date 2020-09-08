@@ -2,11 +2,8 @@ import React from "react";
 import {
   Box,
   Heading,
-  Button,
-  Image,
   Text,
-  Flex,
-  Link
+  Flex
 } from "rebass";
 
 class Page extends React.Component {
@@ -19,8 +16,8 @@ class Page extends React.Component {
         <Box
           width={1}
           padding={0.5}>
-          <Text fontSize={18}> {this.props.text}
-          </Text>
+          <Heading> {this.props.title} </Heading>
+          <Text fontSize={18}> {this.props.text} </Text>
         </Box>
       </Flex>
     );

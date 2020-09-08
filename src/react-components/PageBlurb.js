@@ -1,19 +1,9 @@
 import React from "react";
 import {
   Box,
-  Heading,
-  Button,
-  Image,
   Text,
-  Flex,
   Link
 } from "rebass";
-
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route
-} from 'react-router-dom';
 
 class PageBlurb extends React.Component {
   render() {
@@ -24,7 +14,7 @@ class PageBlurb extends React.Component {
         my={2}
         mx={0}
         sx={{
-          'border-style': 'groove',
+          'borderStyle': 'groove',
         }}>
         <Text fontSize={18}> {this.props.text.substring(0, 200)}
         </Text>

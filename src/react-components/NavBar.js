@@ -2,7 +2,6 @@ import React from "react";
 import ResponsiveLayout from "./ResponsiveLayout.js";
 import DropdownMenu from "./DropdownMenu.js";
 import {
-  Text,
   Link,
   Box
 } from "rebass";
