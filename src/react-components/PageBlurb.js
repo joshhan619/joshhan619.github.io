@@ -1,5 +1,6 @@
 import React from "react";
 import {
+  Heading,
   Box,
   Text,
   Link
@@ -16,10 +17,9 @@ class PageBlurb extends React.Component {
         sx={{
           'borderStyle': 'groove',
         }}>
-        <Text fontSize={18}> {this.props.text.substring(0, 200)}
-        </Text>
-        <Link href={this.props.pagename}> Read more ...
-        </Link>
+        <Heading> {this.props.title} </Heading>
+        <hr/>
+        <Link href={this.props.pagename}> Read more ... </Link>
       </Box>
 
     );

@@ -15,9 +15,11 @@ class Page extends React.Component {
         width={1}>
         <Box
           width={1}
-          padding={0.5}>
+          padding={0.5}
+          pt={40}>
           <Heading> {this.props.title} </Heading>
-          <Text fontSize={18}> {this.props.text} </Text>
+          <hr/>
+          <Text fontSize={18} dangerouslySetInnerHTML={{__html: this.props.text}}/>
         </Box>
       </Flex>
     );

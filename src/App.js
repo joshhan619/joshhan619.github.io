@@ -6,7 +6,7 @@ import {
 } from 'react-router-dom';
 import Home from "./react-components/Home.js"
 import Resume from "./react-components/Resume.js"
-import Projects from "./react-components/Projects.js"
+//import Projects from "./react-components/Projects.js"
 import NavBar from "./react-components/NavBar.js"
 import Page from "./react-components/Page.js"
 import WindowDimensionsProvider from "./react-components/WindowDimensionsProvider.js"
@@ -79,9 +79,6 @@ class App extends React.Component {
                 ))}
                 <Route path="/resume">
                   <Resume />
-                </Route>
-                <Route path="/projects">
-                  <Projects />
                 </Route>
                 <Route path="/" >
                   <Home articles={this.state.articles}/>
