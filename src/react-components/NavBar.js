@@ -29,6 +29,9 @@ class NavBar extends React.Component {
               <Link variant='nav' href="/resume">
                 Resume
               </Link>
+              <Link variant='nav' href="/projects">
+                Projects
+              </Link>
             </Box>
           )}
         />
