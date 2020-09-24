@@ -1,6 +1,5 @@
 import React from "react";
 import self_pic from "./josh.jpg";
-import axios from "axios";
 import {
   Box,
   Heading,
@@ -10,27 +9,7 @@ import {
   Flex
 } from "rebass";
 import {Divider, Spacer} from "./theme.js"
-
-function downloadResume() {
-
-  axios({
-    method: "get",
-    url: "http://localhost:9000/download",
-    responseType: "arraybuffer"
-  })
-  .then((res) => {
-    const file = new File([res.data], {type: "application/pdf"})
-
-    let url = window.URL.createObjectURL(file);
-    let a = document.createElement("a");
-    a.href = url;
-    a.download = 'Joshua Han Resume.pdf';
-    a.click();
-  })
-  .catch((err) => {
-    console.log(err);
-  })
-}
+import resume from "./Joshua Han Resume.pdf"
 
 function Resume() {
 
@@ -45,17 +24,17 @@ function Resume() {
           width: [ '100%', '50%' ],
           borderRadius: 8,
         }}/>
-      <Button variant='primary'
-        onClick = {()=>downloadResume()}
-        my={2}
-        width={1/2}
-        sx={{
-          ':hover': {
-            backgroundColor: 'secondary'
-          }
-        }}>
-        Download Resume
-      </Button>
+      <a width={1/2} href={resume} download="Joshua Han Resume.pdf">
+        <Button variant='primary'
+          my={2}
+          sx={{
+            ':hover': {
+              backgroundColor: 'secondary'
+            }
+          }}>
+          Download Resume
+        </Button>
+      </a>
 
       <Box
         p={1}>

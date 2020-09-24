@@ -23,7 +23,7 @@ class Home extends React.Component {
         Currently, I am interested in the fields of Computer Vision and Computer Graphics.
         <br/>
         <hr/>
-        I am searching for a job/intership for the summer of 2021. Do not be afraid to contact me through my email <a href="mailto:joshua.han@mail.utoronto.ca">joshua.han@mail.utoronto.ca</a> or call me at 437-345-3956.
+        I am searching for a job/internship for the summer of 2021. Do not be afraid to contact me through my email <a href="mailto:joshua.han@mail.utoronto.ca">joshua.han@mail.utoronto.ca</a> or call me at 437-345-3956.
         </Text>
       </Flex>
     );

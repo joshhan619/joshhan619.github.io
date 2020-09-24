@@ -17,7 +17,7 @@ import { Heading, Flex} from "rebass";
 import { ThemeProvider } from "emotion-theming";
 import theme from "@rebass/preset";
 
-import axios from "axios";
+import articles from "./react-components/articles.json"
 
 class App extends React.Component {
 
@@ -26,21 +26,8 @@ class App extends React.Component {
     this.state = {articles: []};
   }
 
-  downloadArticles() {
-    axios({
-      method: "get",
-      url: "http://localhost:9000/articles"
-    })
-    .then((res) => {
-      this.setState({articles: res.data});
-    })
-    .catch((err) => {
-      console.log(err);
-    })
-  }
-
   componentDidMount() {
-      this.downloadArticles();
+      this.setState({articles: articles})
   }
 
   render() {
@@ -53,23 +40,23 @@ class App extends React.Component {
     return (
       <WindowDimensionsProvider>
         <ThemeProvider theme={theme}>
-          <Router>
-            <Flex
-              width={1/2}
-              sx={{
-                position: 'absolute',
-                left: '50%',
-                top: '10%',
-                transform: 'translate(-50%, 0%)',
-                flexDirection: 'column',
-                alignItems: 'center',
-              }}>
-              <Heading
-                fontSize={[4, 5, 6]}>
-                JOSHUA HAN
-              </Heading>
-              <NavBar />
 
+          <Flex
+            width={1/2}
+            sx={{
+              position: 'absolute',
+              left: '50%',
+              top: '10%',
+              transform: 'translate(-50%, 0%)',
+              flexDirection: 'column',
+              alignItems: 'center',
+            }}>
+            <Heading
+              fontSize={[4, 5, 6]}>
+              JOSHUA HAN
+            </Heading>
+            <NavBar />
+            <Router basename={process.env.PUBLIC_URL}>
               <Switch>
                 {this.state.articles.map((article, index) => (
                   <Route key={index} path={article.pagename}>
@@ -88,11 +75,9 @@ class App extends React.Component {
                   <Home articles={this.state.articles}/>
                 </Route>
               </Switch>
-              <Footer />
-            </Flex>
-
-
-          </Router>
+            </Router>
+            <Footer />
+          </Flex>
         </ThemeProvider>
       </WindowDimensionsProvider>
     );
