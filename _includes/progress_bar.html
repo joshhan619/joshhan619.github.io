@@ -1,0 +1,9 @@
+<div class="progress-bar-div">
+    <div class="progress-bar-header">
+        <p>{{ include.title }}</p>
+        <div class="message-box" style="left: calc({{ include.percent }}% - 20px)">{{ include.percent }}%<div class="message-box-tick"></div></div>
+    </div>
+    <div class="progress-bar-container">
+        <div class="progress-bar" style="width:{{ include.percent }}%"></div>
+    </div>
+</div>

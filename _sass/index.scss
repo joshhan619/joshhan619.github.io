@@ -1,0 +1,83 @@
+@import "dash";
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+
+    .headshot {
+        max-width: 30%;
+        border-radius: 10px;
+    } 
+
+    .section-text {
+        padding-left: 1.5em;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .section-block {
+        padding-right: 1.5em;
+        width: 50%;
+        text-align: start;
+    }
+}
+
+.subtitle {
+    font-style: italic;
+}
+
+.progress-bar-div {
+    margin-bottom: 20px;
+
+    .progress-bar-header {
+        position: relative;
+    
+        .message-box {
+            height: 20px;
+            padding: 2px 3px 0 3px;
+            position: absolute;
+            text-align: center;
+            bottom: 0;
+            border-radius: 5px;
+            border: 1px solid;
+            font-size: 12px;
+            @include themed() {
+                background-color: t('background-color');
+                color: t('foreground-color');
+                border-color: t('background-color-contrast');
+            }
+            
+            .message-box-tick {
+                position: absolute;
+                background-color: inherit;
+                width: 7px;
+                height: 7px;
+                left: 0;
+                right: 0;
+                bottom: -4.9px;
+                margin: auto;
+                rotate: 45deg;
+                border-right: 1px solid;
+                border-bottom: 1px solid;
+            }
+        }
+    }
+    
+    .progress-bar-container {
+        border-radius: 10px;
+        height: 10px;
+        width: 100%;
+
+        @include themed() {
+            background-color: t('background-color');
+        }
+        
+        .progress-bar {
+            border-radius: 10px;
+            height: 10px;
+            background-color: $color-green;
+        }
+    }
+}
+

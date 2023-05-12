@@ -18,22 +18,53 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Your awesome title
-email: your-email@example.com
-description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+title: Joshua Han's Portfolio
+email: joshua.jiaxuan.han@gmail.com
+description: I'm a 2023 graduate of University of Toronto's Computer Science program. I'm passionate about agile development and creating cool things. I'm always up for a challenge and I'm eager to learn new technologies. I'm excited for the chance to contribute to the development of amazing products. # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
+github_username: joshhan619
 
 # Build settings
 plugins:
   - jekyll-feed
   - jekyll-remote-theme
 remote_theme: bitbrain/jekyll-dash
+
+# jekyll-paginate
+paginate: 5
+paginate_path: "/blog/page:num/"
+
+dash:
+  # the way how dates should be displayed
+  date_format: "%b %-d, %Y"
+
+  # the animation speed of the post scroll-in effect
+  animation_speed: 50
+
+  # wether to enable Right-to-Left support or not
+  rtl: false
+
+  # Replaces the default avatar provider (gravatar)
+  avatar_source: github
+  github_username: joshhan619
+  #avatar_source: local
+  #avatar_path: /assets/avatar.png
+
+  # generate social links in footer
+  # supported colors: green, red, orange, blue, cyan, pink, teal, yellow, indigo, purple
+  social_links:
+    - url: mailto:joshua.jiaxuan.han@gmail.com
+      icon: envelope
+      color: red
+    - url: https://www.linkedin.com/in/joshua-han-tech/
+      icon: linkedin
+      color: blue
+    - url: https://github.com/joshhan619
+      icon: github-square
+      color: purple
+
+  show_avatar: true
 
 
 
