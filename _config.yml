@@ -20,7 +20,8 @@
 
 title: Joshua Han's Portfolio
 email: joshua.jiaxuan.han@gmail.com
-description: I'm a 2023 graduate of University of Toronto's Computer Science program. I'm passionate about agile development and creating cool things. I'm always up for a challenge and I'm eager to learn new technologies. I'm excited for the chance to contribute to the development of amazing products. # this means to ignore newlines until "baseurl:"
+description: I'm passionate about harnessing artificial intelligence to drive positive global impact. My primary interests lie in computer vision, robotics, and generative AI. Currently, I'm pursuing a Professional Master's in Computer Science at Rice University, where my research focuses on applying transformers to large-scale time series data.
+    # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 github_username: joshhan619

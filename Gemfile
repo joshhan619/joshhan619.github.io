@@ -37,3 +37,5 @@ gem "jekyll-remote-theme", "~> 0.4.3"
 gem "jekyll-paginate", "~> 1.1"
 
 gem "jekyll-tagging", "~> 1.1"
+
+gem 'bigdecimal'
